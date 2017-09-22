@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aah pourquoi le W</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+  <style type="text/css">
+  body {
+    background: #fff;
+    margin: 0;
+  }
+  .hide {
+    display: none;
+  }
+  .container#initial {
+    background: #ef4723;
+    padding: 100px 0;
+    height: 100vh;
+  }
+
+    .container#initial div {
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 600px;
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+  <section class="container hide" id="initial">
+    <div>
+      Parce-que le problème avec le chômage c'est que la minute où tu te réveille le matin, tu est au travail.
+    </div>
+  </section>
+  <section class="container hide" id="secondaire">
+    <div>
+      En travaillant fidèlement huit heures par jour, vous pouvez potentiellement devenir un patron et travailler douze heures par jour.
+    </div>
+  </section>
+
+  <script type="text/javascript" >
+
+    (function($) {
+      $.fn.random = function() {
+          var n = this.length;
+          var r = Math.floor(n * Math.random());
+          return n ? $(this[r]) : $();
+      };
+      $('.hide').random().removeClass("hide");
+    })(jQuery);  
+    
+  </script>
+
+</body>
+</html>
